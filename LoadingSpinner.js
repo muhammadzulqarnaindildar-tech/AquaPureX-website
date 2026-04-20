@@ -1,0 +1,213 @@
+/* ============================================
+   HERO WRAPPER
+============================================ */
+.hero-wrapper {
+  width: 100%;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+/* ============================================
+   HERO LAYOUT
+============================================ */
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 2rem 7rem;
+  }
+}
+
+/* ============================================
+   LEFT CONTENT
+============================================ */
+.hero-left {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .hero-left {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  background: rgba(0, 191, 255, 0.12);
+  border-radius: 999px;
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+
+.hero-highlight {
+  background: linear-gradient(120deg, #00bfff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.hero-text {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    margin-left: 0;
+  }
+}
+
+/* ============================================
+   CTA BUTTONS
+============================================ */
+.heroCta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .heroCta {
+    justify-content: flex-start;
+  }
+}
+
+.ctaPrimary,
+.ctaOutline {
+  padding: 0.85rem 2rem;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 160px;
+}
+
+.ctaPrimary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 150, 255, 0.35);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-3px);
+}
+
+.ctaOutline {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.ctaOutline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ============================================
+   RIGHT SIDE IMAGE
+============================================ */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottle-right {
+  padding: 5px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 30px 70px rgba(0, 95, 175, 0.45),
+    0 0 50px rgba(0, 191, 255, 0.35);
+  transition: transform 0.35s ease;
+}
+
+.bottle-right:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.bottle-right img {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+/* ============================================
+   MOBILE FIXES
+============================================ */
+@media (max-width: 768px) {
+  .bottle-right img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .heroCta {
+    width: 100%;
+  }
+
+  .ctaPrimary,
+  .ctaOutline {
+    width: 100%;
+  }
+
+  .bottle-right img {
+    max-width: 260px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+.ctaPrimary:focus-visible,
+.ctaOutline:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   REDUCED MOTION
+============================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

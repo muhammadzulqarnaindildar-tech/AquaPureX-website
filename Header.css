@@ -1,0 +1,229 @@
+/* GENERAL FOOTER */
+footer {
+  background: #003b73; /* Fixed background color */
+  color: rgba(255, 255, 255, 0.92);
+  margin-top: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pure{
+      color: rgb(134, 200, 72);
+    margin-top: -27px;
+    font-size: 17px;
+    margin-left: 52px;
+}
+
+.since{
+  margin-top: -2px;
+    margin-left: 137px;
+    font-size: 9px;
+}
+
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00bfff, #0077b6);
+}
+
+.footer-inner {
+  max-width: 1426px;
+  padding: 2rem 1.25rem 1.4rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+/* GRID */
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+  font-size: 0.85rem;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: -15px;
+}
+
+
+
+.brand-logo {
+width: 51px;
+    height: 77px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    margin-left: -18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+      margin-top: -7px;
+
+}
+
+.brand-text-sub {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* FOOTER TEXT */
+footer p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 320px;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+
+/* HEADINGS & LINKS */
+.footer-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.82rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #00bfff;
+}
+
+.footer-links span {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: 1.4rem;
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-pill {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff; /* default icon color */
+  background: rgba(255, 255, 255, 0.08); /* light transparent background */
+}
+
+/* Hover: only icon color changes, background stays same */
+.social-pill.facebook svg {
+  color: #1877f2; /* Facebook blue */
+}
+
+.social-pill.instagram svg {
+  color: #e1306c; /* Instagram pink */
+}
+
+.social-pill.whatsapp svg {
+  color: #25d366; /* WhatsApp green */
+}
+
+.social-pill:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-inner {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .brand-logo {
+            width: 50px;
+        height: 57px;
+  }
+  
+  .brand-text-title {
+    font-size: 1.1rem;
+  }
+  
+  .brand-text-sub {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .since{
+        margin-left: 124px;
+
+  }
+
+    .pure{
+        margin-left: 48px;
+        margin-top: -26px;
+  }
+  
+  .social-pill {
+    width: 28px;
+    height: 28px;
+  }
+}
